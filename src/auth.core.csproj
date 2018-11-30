@@ -17,10 +17,12 @@
     <!--PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" /                  msbuild support for razor -->
 
     <!-- AspNetCore Identity Support -->
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.4" />
     <!--PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.1.2" /-->
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.6" />
     
     <!--PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.1.1" /                            mvc cookie based auth -->
     <!--PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.6" PrivateAssets="All" /   views and controller scaffolding-->
