@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 using auth.core.Access;
-// using auth.core.Access.Models;
+using auth.core.Access.Models;
 
 namespace auth.core
 {
@@ -23,7 +25,8 @@ namespace auth.core
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-           // services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AccessContext>();
+            services.AddDbContext<AuthContext>(options => options.UseSqlite(Configuration.GetConnectionString("AuthConnection")));
+            //services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AccessContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
